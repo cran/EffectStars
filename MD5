@@ -1,4 +1,4 @@
-34ecb64426c0d09e8063c74131e98eb9 *DESCRIPTION
+8d6b2be438914d61953ad9174693cf5b *DESCRIPTION
 aa4bd85a69e08432a6bb637ddb8c80e3 *EffectStars-Ex.R
 df390c53434517b304ac5db487184641 *NAMESPACE
 395206925b7a78a94fbcd533711f153d *R/star.cumulative.R
@@ -23,7 +23,7 @@ c6253e13cb7e35f015e98d0fee720ee1 *inst/doc/BEPS.pdf
 773ba976ed81d19c186c0ab2adc9f235 *inst/doc/coffee.Rnw
 e10b4629488f872dcb01b683019a2752 *inst/doc/coffee.pdf
 47d423636010713ad3b279ed151620fe *inst/doc/election.Rnw
-0108ffb6f7614dbeeacc89c18013fcaa *inst/doc/election.pdf
+58d5aa7bd5811296c906cf7a9c9ce526 *inst/doc/election.pdf
 c73988dae07cc8149a8fb38c4ce570a4 *inst/doc/insolvency.Rnw
 0a63ed5a5e0b809c84f15b7224f58e64 *inst/doc/insolvency.pdf
 389bf3452ffa27d058443baed66149e5 *inst/doc/plebiscite.Rnw
