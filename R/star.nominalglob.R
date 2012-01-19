@@ -236,7 +236,7 @@ function (formula, data, conf.int = FALSE, symmetric = TRUE,
     odds <- t(x1)
     # compute p-values
     if (printpvalues) {
-        pvals <- 1 - pnorm(abs(log(odds)/semat))
+        pvals <- 2*(1 - pnorm(abs(log(odds)/semat)))
     }
     # scaling
     if (conf.int) {
@@ -715,7 +715,7 @@ function (formula, data, conf.int = FALSE, symmetric = TRUE,
       odds <- t(x1)
       # compute p-values
       if (printpvalues) {
-        pvals <- 1 - pnorm(abs(log(odds)/semat))
+        pvals <- 2*(1 - pnorm(abs(log(odds)/semat)))
       }
       # scaling
       if (conf.int) {

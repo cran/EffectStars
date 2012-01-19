@@ -11,11 +11,11 @@
 
 \setkeys{Gin}{width=1.1\textwidth}
 
-<<echo=FALSE,eval=FALSE>>=
+<<echo=FALSE>>=
 options(width=80)
 @
 
-<<results=hide,eval=FALSE>>=
+<<results=hide>>=
 library(EffectStars)
 data(insolvency)
 @

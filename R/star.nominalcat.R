@@ -309,7 +309,7 @@ catnamesresults<-names(catspec)
     odds <- t(x1)
     # compute p-values
     if (printpvalues) {
-        pvals <- 1 - pnorm(abs(log(odds)/semat))
+        pvals <- 2*(1 - pnorm(abs(log(odds)/semat)))
     }
 
     # scaling
@@ -906,7 +906,7 @@ text(y = ycat + fac * 1.9 * (l2 + 20)/32, x = xcat,
   odds <- t(x1)
   # compute p-values
   if (printpvalues) {
-    pvals <- 1 - pnorm(abs(log(odds)/semat))
+    pvals <- 2*(1 - pnorm(abs(log(odds)/semat)))
   }
   
   # scaling
