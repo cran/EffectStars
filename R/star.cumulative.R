@@ -4,7 +4,7 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
     nlines = NULL, select = NULL, dist.x = 1, dist.y = 1, dist.cov = 1, 
     dist.cat = 1, xpd = TRUE, main = "", col.fill = "gray90", 
     col.circle = "black", lwd.circle = 1, lty.circle = "longdash", 
-    lty.global = "dotdash", col.global = "red", lwd.global = 1, cex.labels = 1, 
+    col.global = "black", lwd.global = 1, lty.global = "dotdash", cex.labels = 1, 
     cex.cat = 0.8, xlim = NULL, ylim = NULL) 
 { 
      if(!is.data.frame(data))
@@ -303,7 +303,7 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
       lselect<-length(select)}
       plusint <- select==1
     
-    # compute exp and scaling factors
+    # compute exponentials and scaling factors
     coefs <- exp(coefmat)
     x1 <- t(coefs)
     fac <- max(x1)
@@ -335,13 +335,10 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
     if (is.null(ylim)) {
         ylim <- c(min(loc[, 2]) - 1.5 * max(x1), max(loc[, 2]) + 
             2 * max(x1))
-        yrange <- range(ylim)
     }
     if (is.null(xlim)) {
         xlim <- c(min(loc[, 1]) - 1.6 * max(x1), max(loc[, 1]) + 
             1.6 * max(x1))
-        xrange <- range(xlim)
-        xr2 <- mean(c(xrange, yrange))
     }
     
      
@@ -351,6 +348,7 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
         lwd = 1.2, lty = "solid", flip.labels = FALSE, locations = loc, 
         xlim = xlim, ylim = ylim, labels = "", main = main, add = FALSE)
     par(cex = 1, font = 1)
+     
     # compute angles in stars, plot category labels
     cosis <- c()
     sinis <- c()
@@ -443,19 +441,21 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
     plotlabs <- paste(c("Intercept", covlab), "\n", labvec, sep = "")
     text(y = loc[, 2] + fac * 0.06 * (l2 + 20) * dist.cov, x = loc[, 1], 
         labels = plotlabs[select], font = 1, cex = cex.labels)
-    # create return lists
+   
+     # create return lists
 
-     mult2<- vglm(formula, family = cumulative(parallel = TRUE), data = data, maxit = maxit)
+    mult2<- vglm(formula, family = cumulative(parallel = TRUE), data = data, maxit = maxit)
     outputnames<-rownames(coefficients(mult2,TRUE))
-      outputrows<-colnames(coefficients(mult2,TRUE))
+    outputrows<-colnames(coefficients(mult2,TRUE))
     colnames(sdsmat)<-outputnames
     colnames(odds)<-outputnames
-      oddsnames<-paste("odds(P[Y<=",1:(z-1),"])",sep="")
+    oddsnames<-paste("odds(P[Y<=",1:(z-1),"])",sep="")
     rownames(odds)<-oddsnames
     rownames(sdsmat)<-outputrows
-coefficients<-log(odds)
-     rownames(coefficients)<-outputrows
+    coefficients<-log(odds)
+    rownames(coefficients)<-outputrows
      ################
+     
     if (test.rel) {
         p_rel <- matrix(lrexact, ncol = l - 1)
         colnames(p_rel) <- outputnames[-1]

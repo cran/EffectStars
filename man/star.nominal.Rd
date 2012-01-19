@@ -10,10 +10,10 @@ the package \pkg{VGAM}. The visualization is based on the function \code{\link{s
 }
 \usage{
 star.nominal(formula, data, xij = NULL, conf.int = FALSE, symmetric = TRUE, 
-    printpvalues = TRUE, test.rel = TRUE, refLevel = 1, maxit = 100, 
-    scale = TRUE, nlines = NULL, select = NULL, catstar = TRUE, dist.x = 1, 
-    dist.y = 1, dist.cov = 1, dist.cat = 1, xpd = TRUE, main = "", lwd.stars = 1,
-    col.fill = "gray90", col.circle = "black", lwd.circle = 1, 
+    pred.coding = "reference", printpvalues = TRUE, test.rel = TRUE, refLevel = 1, 
+    maxit = 100, scale = TRUE, nlines = NULL, select = NULL, catstar = TRUE, 
+    dist.x = 1, dist.y = 1, dist.cov = 1, dist.cat = 1, xpd = TRUE, main = "", 
+    lwd.stars = 1, col.fill = "gray90", col.circle = "black", lwd.circle = 1, 
     lty.circle = "longdash", lty.conf = "dotted", cex.labels = 1, cex.cat = 0.8, 
     xlim = NULL, ylim = NULL)
 }
@@ -33,6 +33,10 @@ If \code{TRUE}, confidence intervals are drawn.
   \item{symmetric}{
 Which side constraint for the coefficients in the multinomial logit model shall be used for the plot?
 Default \code{TRUE} uses symmetric side constraints, \code{FALSE} uses the reference category specified by \code{refLevel}.
+}
+  \item{pred.coding}{
+Which coding for categorical predictors with more than two categories is to be used? 
+Default \code{pred.coding="reference"} uses the first category as reference category, the alternative \code{pred.coding="effect"} uses effect coding equivalent to symmetric side constraints. For \code{pred.coding="effect"} a star for every category is plotted, for \code{pred.coding="reference"} no star for the reference category is plotted. 
 }
   \item{printpvalues}{
 If \code{TRUE}, p-values for the respective coefficients are printed besides the category labels.

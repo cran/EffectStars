@@ -1,7 +1,7 @@
 Package: EffectStars
 Type: Package
 Title: Visualization of Categorical Response Models
-Version: 1.0
+Version: 1.1
 Date: 2012-01-19
 Encoding: UTF-8
 Depends: R (>= 2.10), VGAM
@@ -13,6 +13,6 @@ Description: The package provides functions to visualize regression
         impression of the fitted model.
 License: GPL-2
 LazyLoad: yes
-Packaged: 2012-03-06 09:21:16 UTC; schaubergerg
+Packaged: 2012-05-23 08:04:53 UTC; schaubergerg
 Repository: CRAN
-Date/Publication: 2012-03-06 15:32:48
+Date/Publication: 2012-05-23 09:35:49

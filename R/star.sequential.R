@@ -245,7 +245,7 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
       lselect<-length(select)}
       plusint <- select==1
 
-    # compute exp and factors for scaling
+    # compute exponentials and scaling factors
     coefs <- exp(coefmat)
     x1 <- t(coefs)
     fac <- max(x1)
@@ -276,13 +276,10 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
     if (is.null(ylim)) {
         ylim <- c(min(loc[, 2]) - 1.5 * max(x1), max(loc[, 2]) + 
             2 * max(x1))
-        yrange <- range(ylim)
     }
     if (is.null(xlim)) {
         xlim <- c(min(loc[, 1]) - 1.6 * max(x1), max(loc[, 1]) + 
             1.6 * max(x1))
-        xrange <- range(xlim)
-        xr2 <- mean(c(xrange, yrange))
     }
     
 
@@ -388,7 +385,7 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
     text(y = loc[, 2] + fac * 0.06 * (l2 + 20) * dist.cov, x = loc[, 1], 
         labels = plotlabs[select], font = 1, cex = cex.labels)
 
-    ##################
+    ################### create return lists
     mult2<- vglm(formula, family = sratio(parallel = TRUE), data = data, maxit = maxit)
     outputnames<-rownames(coefficients(mult2,TRUE))
     colnames(sdsmat)<-outputnames
@@ -397,7 +394,7 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
     oddsnames<-paste("odds(P[Y=",1:(z-1),"|Y>=",1:(z-1),"])",sep="")
     odds<-exp(coefmat)
     rownames(odds)<-oddsnames
-    #rownames(sdsmat)<-outputnames[select]
+
     if (test.rel) {
         p_rel <- matrix(lrexact, ncol = l - 1)
         colnames(p_rel) <- outputnames[-1]

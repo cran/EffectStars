@@ -14,7 +14,7 @@ star.cumulative(formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE
     nlines = NULL, select = NULL, dist.x = 1, dist.y = 1, dist.cov = 1, 
     dist.cat = 1, xpd = TRUE, main = "", col.fill = "gray90", 
     col.circle = "black", lwd.circle = 1, lty.circle = "longdash", 
-    lty.global = "dotdash", col.global = "red", lwd.global = 1, cex.labels = 1, 
+    col.global = "black", lwd.global = 1, lty.global = "dotdash", cex.labels = 1, 
     cex.cat = 0.8, xlim = NULL, ylim = NULL)
 }
 \arguments{
