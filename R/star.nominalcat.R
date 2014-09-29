@@ -49,10 +49,10 @@ function (formula, data, xij, conf.int = FALSE, symmetric = TRUE,
     resp <- data[, colnames(data) == response]
  
     if(is.ordered(resp))
-      stop("The resonse may not be of class ordered!")
+      stop("The response may not be of class ordered!")
     
     if(!is.factor(resp))
-      stop("The resonse has to be of class factor!")   
+      stop("The response has to be of class factor!")   
     
     if(!is.null(select) & !is.vector(select, mode = "numeric"))
       stop("Argument select has to be NULL or a numeric vector")

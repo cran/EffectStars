@@ -1,64 +1,55 @@
-% \VignetteIndexEntry{Election data}
-% \VignetteDepends{}
+### R code from vignette source 'election.Rnw'
 
-\documentclass[a4paper]{article}
-
-\title{Election data}
-
-\begin{document}
-
-\maketitle
-
-\setkeys{Gin}{width=1.1\textwidth}
-
-<<echo=FALSE>>=
+###################################################
+### code chunk number 1: election.Rnw:14-15
+###################################################
 options(width=80)
-@
 
-<<results=hide>>=
+
+###################################################
+### code chunk number 2: election.Rnw:18-20
+###################################################
 library(EffectStars)
 data(election)
-@
 
-Effect Stars for the multinomial logit model for the election data. 
 
-<<fig=TRUE,width=15,height=25>>=
+###################################################
+### code chunk number 3: election.Rnw:25-28
+###################################################
 star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest + 
 Unemployment + Highschool + Union + West + Gender, election, cex.cat = 1,
 cex.labels = 1.2, lwd.circle = 1.5, dist.cov = 0.8)
-@
 
-Effect Stars for the multinomial logit model for the election data using effect coding for the categorical predictor religion.
 
-<<fig=TRUE,width=15,height=25>>=
+###################################################
+### code chunk number 4: election.Rnw:33-36
+###################################################
 star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest +
 Unemployment + Highschool + Union + West + Gender, election, cex.cat = 1,
 cex.labels = 1.2, lwd.circle = 1.5, dist.cov = 0.8, pred.coding = "effect")
-@
 
-Effect Stars for the multinomial logit model for the election data including confidence intervals. 
 
-<<fig=TRUE,width=15,height=25>>=
+###################################################
+### code chunk number 5: election.Rnw:41-45
+###################################################
 star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest + 
 Unemployment + Highschool + Union + West + Gender, election, cex.cat = 1,
 cex.labels = 1.2, conf.int = TRUE, dist.cov = 0.7, lwd.circle = 0.01, 
 lty.circle = "solid", col.circle = "gray90")
-@
 
-Effect Stars for the multinomial logit model for the election data with reference category "FDP". Leaving away the p-values can sometimes increase clarity.
 
-<<fig=TRUE,width=15,height=25>>=
+###################################################
+### code chunk number 6: election.Rnw:50-54
+###################################################
 star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest + 
 Unemployment + Highschool + Union + West + Gender, election, cex.cat = 1,
 cex.labels = 1.2, lwd.circle = 1.5, refLevel = 3, symmetric = FALSE, 
 dist.cov = 0.8, printpvalues = FALSE)
-@
 
 
-Effect Stars for the multinomial logit model for the election data with four category-specific covariates.
-
-
-<<fig=TRUE,width=15,height=25>>=
+###################################################
+### code chunk number 7: election.Rnw:61-79
+###################################################
 election[,13:16] <- election[,13:16] - election[,12]
 election[,18:21] <- election[,18:21] - election[,17]
 election[,23:26] <- election[,23:26] - election[,22]
@@ -77,7 +68,5 @@ Immigration ~ Immigration_SPD + Immigration_FDP + Immigration_Greens + Immigrati
 Nuclear ~ Nuclear_SPD + Nuclear_FDP + Nuclear_Greens + Nuclear_Left,
 Left_Right ~ Left_Right_SPD + Left_Right_FDP + Left_Right_Greens + Left_Right_Left),
 cex.cat = 1, cex.labels = 1.4, lwd.circle = 1.5, dist.cov = 0.8)
-@
 
 
-\end{document}

@@ -46,7 +46,7 @@ function (formula, data, global = NULL, test.rel = TRUE, test.glob = FALSE,
     resp <- data[, colnames(data) == response]
 
     if(!is.ordered(resp))
-      stop("The resonse has to be of class ordered!")
+      stop("The response has to be of class ordered!")
     
     if(!is.null(select) & !is.vector(select, mode = "numeric"))
       stop("Argument select has to be NULL or a numeric vector")
