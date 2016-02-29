@@ -1,5 +1,5 @@
 star.nominalcat <-
-function (formula, data, xij, conf.int = FALSE, symmetric = TRUE, 
+function (formula, data, xij, conf.int = FALSE, symmetric = FALSE, 
     pred.coding = "reference", printpvalues = TRUE, test.rel = TRUE, refLevel = 1, 
     maxit = 100, scale = TRUE, nlines = NULL, select = NULL, catstar = TRUE, 
     dist.x = 1, dist.y = 1, dist.cov = 1, dist.cat = 1, xpd = TRUE, main = "", 

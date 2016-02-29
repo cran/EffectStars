@@ -23,14 +23,16 @@ Subset of the 1996 American National Election Study.
 \source{
 R package faraway: \code{\link[faraway]{nes96}}
 }
-\references{
-\url{http://www.stat.washington.edu/quinn}
-}
 \examples{
 \dontrun{
 data(PID)
-vignette("PID")
+PID$TVnews <- scale(PID$TVnews)
+PID$Income <- scale(PID$Income)
+PID$Age <- scale(PID$Age)
+PID$Population <- scale(PID$Population)
+
+star.nominal(PID ~ TVnews + Income + Population + Age + Education, data = PID)
 }
-}
+ }
 \keyword{datasets}
 \keyword{multinomial response}

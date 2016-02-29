@@ -34,7 +34,12 @@ Fox, J. (2008): \emph{Applied Regression Analysis and Generalized Linear Models}
 \examples{
 \dontrun{
 data(plebiscite)
-vignette("plebiscite")
+plebiscite$Population <- scale(plebiscite$Population)
+plebiscite$Age <- scale(plebiscite$Age)
+plebiscite$Income <- scale(plebiscite$Income)
+
+star.nominal(Vote ~ SantiagoCity + Population + Gender + Age + Education + 
+Income, data = plebiscite)
 }
 }
 \keyword{datasets}

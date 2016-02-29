@@ -44,7 +44,12 @@ Duncker & Humblot.
 \examples{
 \dontrun{
 data(insolvency)
-vignette("insolvency")
+
+
+star.sequential(Insolvency ~ Sector + Legal + Pecuniary_Reward + Seed_Capital
++ Debt_Capital + Employees, insolvency, test.glob = FALSE, globcircle = TRUE, dist.x = 1.3)
+
+star.cumulative(Insolvency ~ Sector + Employees, insolvency, select = 2:4)
 }
 }
 \keyword{datasets}

@@ -13,6 +13,11 @@ star.nominalglob(formula, data, conf.int, symmetric, pred.coding, printpvalues, 
     xpd, main, lwd.stars, col.fill, col.circle, lwd.circle, lty.circle, lty.conf, 
     cex.labels, cex.cat, xlim, ylim)
 }else{
+  if(symmetric){
+    warning("Symmetric side constraints are not possible if category-specific covariates are included. 
+            The argument 'symmetric' is set 'symmetric = FALSE'.")
+    symmetric <- FALSE
+  }
 star.nominalcat(formula, data, xij, conf.int, symmetric, pred.coding, printpvalues, test.rel, 
     refLevel, maxit, scale, nlines, select, catstar, dist.x, dist.y, dist.cov, 
     dist.cat, xpd, main, lwd.stars, col.fill, col.circle, lwd.circle, lty.circle, 

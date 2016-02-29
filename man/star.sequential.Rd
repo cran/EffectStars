@@ -135,16 +135,16 @@ your own \code{xlim}}
 your own \code{ylim}}
 }
 
-\references{
-Tutz, G. and Schauberger, G. (2012): \emph{Visualization of Categorical Response Models -
-from Data Glyphs to Parameter Glyphs}, Department of Statistics, LMU Munich, Technical Report 117.
-\cr \cr
-Gerhard Tutz (2012): \emph{Regression for Categorical Data}, Cambridge University Press
-}
 \author{
 Gunther Schauberger\cr
-\email{gunther.schauberger@stat.uni-muenchen.de}\cr
+\email{gunther@stat.uni-muenchen.de}\cr
 \url{http://www.statistik.lmu.de/~schauberger/}
+}
+\references{
+Tutz, G. and Schauberger, G. (2012): \emph{Visualization of Categorical Response Models -
+from Data Glyphs to Parameter Glyphs}, Journal of Computational and Graphical Statistics 22(1), 156-177.
+\cr \cr
+Gerhard Tutz (2012): \emph{Regression for Categorical Data}, Cambridge University Press
 }
 
 \seealso{
@@ -152,7 +152,10 @@ Gunther Schauberger\cr
 }
 \examples{
 \dontrun{
-vignette("insolvency")
+data(insolvency)
+
+star.sequential(Insolvency ~ Sector + Legal + Pecuniary_Reward + Seed_Capital
++ Debt_Capital + Employees, insolvency, test.glob = FALSE, globcircle = TRUE, dist.x = 1.3)
 }
 }
 

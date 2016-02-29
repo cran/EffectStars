@@ -33,6 +33,7 @@ If \code{TRUE}, confidence intervals are drawn.
   \item{symmetric}{
 Which side constraint for the coefficients in the multinomial logit model shall be used for the plot?
 Default \code{TRUE} uses symmetric side constraints, \code{FALSE} uses the reference category specified by \code{refLevel}.
+If category-specific covariates are specified using \code{xij}, automatically \code{symmetric = FALSE} is set. Symmetric side constraints are not possible in the case of category-specific covariates. 
 }
   \item{pred.coding}{
 Which coding for categorical predictors with more than two categories is to be used? 
@@ -154,16 +155,16 @@ your own \code{xlim}}
 \item{ylim}{\code{ylim} values that were automatically produced. May be helpfull if you want to specify
 your own \code{ylim}}
 }
-\references{
-Tutz, G. and Schauberger, G. (2012): \emph{Visualization of Categorical Response Models -
-from Data Glyphs to Parameter Glyphs}, Department of Statistics, LMU Munich, Technical Report 117.
-\cr \cr
-Gerhard Tutz (2012): \emph{Regression for Categorical Data}, Cambridge University Press
-}
 \author{
 Gunther Schauberger\cr
-\email{gunther.schauberger@stat.uni-muenchen.de}\cr
+\email{gunther@stat.uni-muenchen.de}\cr
 \url{http://www.statistik.lmu.de/~schauberger/}
+}
+\references{
+Tutz, G. and Schauberger, G. (2012): \emph{Visualization of Categorical Response Models -
+from Data Glyphs to Parameter Glyphs}, Journal of Computational and Graphical Statistics 22(1), 156-177.
+\cr \cr
+Gerhard Tutz (2012): \emph{Regression for Categorical Data}, Cambridge University Press
 }
 
 \seealso{
@@ -171,13 +172,41 @@ Gunther Schauberger\cr
 }
 \examples{
 \dontrun{
-vignette("election")
-vignette("alligator")
-vignette("coffee")
-vignette("plebiscite")
-vignette("PID")
-vignette("BEPS")
-vignette("womenlabour")
+data(election)
+
+# simple multinomial logit model
+star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest + 
+                 Unemployment + Highschool + Union + West + Gender, election)
+
+# Use effect coding for the categorical predictor religion
+star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest + 
+                 Unemployment + Highschool + Union + West + Gender, election,
+                 pred.coding = "effect")                 
+
+# Use reference category "FDP" instead of symmetric side constraints
+star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest + 
+                 Unemployment + Highschool + Union + West + Gender, election,
+                 refLevel = 3, symmetric = FALSE)
+                 
+# Use category-specific covariates
+election[,13:16] <- election[,13:16] - election[,12]
+election[,18:21] <- election[,18:21] - election[,17]
+election[,23:26] <- election[,23:26] - election[,22]
+election[,28:31] <- election[,28:31] - election[,27]
+
+election$Social <- election$Social_SPD
+election$Immigration <- election$Immigration_SPD
+election$Nuclear <- election$Nuclear_SPD
+election$Left_Right <- election$Left_Right_SPD
+
+star.nominal(Partychoice ~ Social + Immigration + Nuclear + Left_Right + Age + 
+Religion + Democracy + Pol.Interest + Unemployment + Highschool + Union + West + 
+Gender, data = election, 
+xij = list(Social ~ Social_SPD + Social_FDP + Social_Greens + Social_Left,
+Immigration ~ Immigration_SPD + Immigration_FDP + Immigration_Greens + Immigration_Left,
+Nuclear ~ Nuclear_SPD + Nuclear_FDP + Nuclear_Greens + Nuclear_Left,
+Left_Right ~ Left_Right_SPD + Left_Right_FDP + Left_Right_Greens + Left_Right_Left),
+symmetric = FALSE)
 }
 }
 \keyword{ multinomial logit model }

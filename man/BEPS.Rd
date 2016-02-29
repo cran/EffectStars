@@ -35,7 +35,16 @@ J. Fox and R. Andersen (2006): \emph{Effect displays for multinomial and proport
 \examples{
 \dontrun{
 data(BEPS)
-vignette("BEPS")
+
+BEPS$Europe<-scale(BEPS$Europe)
+BEPS$Age<-scale(BEPS$Age)
+BEPS$Leader_Labour<-BEPS$Leader_Labour-BEPS$Leader_Cons
+BEPS$Leader<-BEPS$Leader_Labour
+BEPS$Leader_Liberals<-BEPS$Leader_Liberals-BEPS$Leader_Cons
+
+star.nominal(Vote ~ Age + Household + National_Economy + Household + Leader + 
+Europe + Political_Knowledge + Gender, data = BEPS, 
+xij = list(Leader~Leader_Labour+Leader_Liberals), catstar = FALSE, symmetric = FALSE)
 }
 }
 \keyword{datasets}

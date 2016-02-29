@@ -29,7 +29,7 @@ Agresti (2002): \emph{Categorical Data Analysis}, Wiley.
 \examples{
 \dontrun{
 data(alligator)
-vignette("alligator")
+star.nominal(Food ~ Size + Lake + Gender, data = alligator, nlines = 2)
 }
 }
 \keyword{datasets}

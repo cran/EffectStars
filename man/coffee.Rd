@@ -32,7 +32,9 @@ Gesellschaft \enc{für}{fuer} Konsumforschung (GfK)
 \examples{
 \dontrun{
 data(coffee)
-vignette("coffee")
+
+star.nominal(Brand ~ Amount + Age + SocialLevel + Income + Persons +
+                 PriceSensitivity + Education, coffee, cex.cat = 0.5, cex.labels = 0.8)
 }
 }
 \keyword{datasets}

@@ -20,12 +20,12 @@ For further details see \code{\link{star.nominal}}, \code{\link{star.sequential}
 
 \author{
 Gunther Schauberger\cr
-\email{gunther.schauberger@stat.uni-muenchen.de}\cr
+\email{gunther@stat.uni-muenchen.de}\cr
 \url{http://www.statistik.lmu.de/~schauberger/}
 }
 \references{
 Tutz, G. and Schauberger, G. (2012): \emph{Visualization of Categorical Response Models -
-from Data Glyphs to Parameter Glyphs}, Department of Statistics, LMU Munich, Technical Report 117.
+from Data Glyphs to Parameter Glyphs}, Journal of Computational and Graphical Statistics 22(1), 156-177.
 \cr \cr
 Gerhard Tutz (2012): \emph{Regression for Categorical Data}, Cambridge University Press
 }
@@ -39,15 +39,4 @@ Gerhard Tutz (2012): \emph{Regression for Categorical Data}, Cambridge Universit
 \keyword{sequential logit model}
 \keyword{cumulative logit model}
 \keyword{categorical data}
-\examples{
-\dontrun{
-vignette("alligator")
-vignette("BEPS")
-vignette("coffee")
-vignette("election")
-vignette("insolvency")
-vignette("PID")  
-vignette("plebiscite")
-vignette("womenlabour")
-}
-}
+

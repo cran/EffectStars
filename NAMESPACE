@@ -1,3 +1,6 @@
-exportPattern("^[[:alpha:]]+")
+export(star.nominal, star.sequential, star.cumulative)
 
 import(VGAM)
+
+  importFrom("graphics", "par", "stars", "symbols", "text")
+  importFrom("stats", "as.formula", "pchisq", "pnorm", "qnorm", "var")

@@ -29,7 +29,9 @@ Fox, J. (2008): \emph{Applied Regression Analysis and Generalized Linear Models}
 \examples{
 \dontrun{
 data(womenlabour)
-vignette("womenlabour")
+womenlabour$IncomeHusband <- scale(womenlabour$IncomeHusband)
+
+star.nominal(Participation ~ IncomeHusband + Children + Region, womenlabour)
 }
 }
 \keyword{datasets}
