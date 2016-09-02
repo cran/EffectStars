@@ -7,6 +7,8 @@
 Visualization of Categorical Response Models
 }
 \description{
+\strong{The package EffectStars2 provides a more up-to-date implementation of effect stars!}
+
 The package provides functions that visualize categorical regression models.\cr
 Included models are the multinomial logit model, the sequential logit model and the
 cumulative logit model.\cr

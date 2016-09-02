@@ -5,6 +5,8 @@
 Effect stars for cumulative logit models
 }
 \description{
+\strong{The package EffectStars2 provides a more up-to-date implementation of effect stars!}
+
 The function computes and visualizes cumulative logit models. The computation is done with help of
 the package \pkg{VGAM}. The visualization is based on the function \code{\link{stars}} from the package \pkg{graphics}.
 }

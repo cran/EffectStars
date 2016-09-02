@@ -24,3 +24,12 @@ star.nominalcat(formula, data, xij, conf.int, symmetric, pred.coding, printpvalu
     lty.conf, cex.labels, cex.cat, xlim, ylim)
 }
 }
+
+
+.onAttach <- function(libname, pkgname) {
+  packageStartupMessage(
+"***
+The package EffectStars is not the latest implementation of effect stars, 
+it is recommended to use EffectStars2 instead!
+***")
+}

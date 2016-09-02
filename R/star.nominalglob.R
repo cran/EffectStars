@@ -492,7 +492,7 @@ function (formula, data, conf.int = FALSE, symmetric = TRUE,
       dummydat2 <- as.data.frame(dummydat2)
       colnames(dummydat2) <- paste("V", 1:ncol(dummydat2), sep = "")
       
-      
+
       multi.df<-rep(0,length(covariates))
       multi<-c()
       multi2<-c()
@@ -536,8 +536,8 @@ function (formula, data, conf.int = FALSE, symmetric = TRUE,
           ku<-multi2[u]
           
           T.mat<-matrix(rep(-diag(z-1),ku),nrow=z-1,byrow=FALSE)
-          coef.h<-coefmat[,-1]
-          coef.h<-coef.h[,multi==vb]
+          coef.h<-coefmat[,-1,drop=FALSE]
+          coef.h<-coef.h[,multi==vb,drop=FALSE]
           
           coef.add<-T.mat%*%matrix(c(coef.h),ncol=1)
           coef.after<-cbind(coef.after,coef.h,coef.add)
@@ -650,8 +650,9 @@ function (formula, data, conf.int = FALSE, symmetric = TRUE,
         diag(K) <- (z - 1)/z
         cosym <- K %*% coefmat
         coef3 <- matrix(rep(-1, z - 1), ncol = z - 1) %*% cosym
+
         coef2 <- matrix(0, ncol = l, nrow = z)
-        coef2[refLevel, ] <- coef3
+        coef2[refLevel,] <- coef3
         coef2[-refLevel, ] <- cosym
         ###
         

@@ -68,7 +68,8 @@ star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest +
                  Unemployment + Highschool + Union + West + Gender, election,
                  refLevel = 3, symmetric = FALSE)
                  
-# Use category-specific covariates
+# Use category-specific covariates, subtract values for reference 
+# category CDU
 election[,13:16] <- election[,13:16] - election[,12]
 election[,18:21] <- election[,18:21] - election[,17]
 election[,23:26] <- election[,23:26] - election[,22]

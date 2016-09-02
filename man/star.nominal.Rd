@@ -5,6 +5,8 @@
 Effect stars for multinomial logit models
 }
 \description{
+\strong{The package EffectStars2 provides a more up-to-date implementation of effect stars!}
+
 The function computes and visualizes multinomial logit models. The computation is done with help of
 the package \pkg{VGAM}. The visualization is based on the function \code{\link{stars}} from the package \pkg{graphics}.
 }
@@ -188,7 +190,8 @@ star.nominal(Partychoice ~ Age + Religion + Democracy + Pol.Interest +
                  Unemployment + Highschool + Union + West + Gender, election,
                  refLevel = 3, symmetric = FALSE)
                  
-# Use category-specific covariates
+# Use category-specific covariates, subtract values for reference 
+# category CDU
 election[,13:16] <- election[,13:16] - election[,12]
 election[,18:21] <- election[,18:21] - election[,17]
 election[,23:26] <- election[,23:26] - election[,22]
