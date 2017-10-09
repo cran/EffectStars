@@ -1,4 +1,4 @@
-f544126350e7ae351114f3042c30a090 *DESCRIPTION
+1be60c82c953878babb6a35e108041be *DESCRIPTION
 9583f0e386c754b4ab7ea5b6452e1630 *NAMESPACE
 b0c706ff3ce9013565125a4efb051f08 *R/star.cumulative.R
 e2be7f6ceb93a0ba0851b17174e0bb73 *R/star.nominal.r
@@ -13,15 +13,15 @@ fec854015dd3ade44e890224c699ce5d *data/election.rda
 8158ec3ab64962193550d7c42633e1c5 *data/insolvency.rda
 35825b32574ffa6662b83a1c050eb4ec *data/plebiscite.rda
 ed1ff23939ec4ea60a6cb2f7b88a9891 *data/womenlabour.rda
-80c65c5f29d93f3ca204687f46d9e623 *man/BEPS.Rd
-482a3855c0a83f2938bd13ef2a33f1f0 *man/EffectStars-package.Rd
+b56daf2d5d80f9d7043e7e883c301789 *man/BEPS.Rd
+7c1043472b647b24206d8b26ceb10742 *man/EffectStars-package.Rd
 8371118e88503f9bfc4abf14f0058b65 *man/PID.Rd
 a8997c3e1d4f6973efae45ed1fe32a3b *man/alligator.Rd
-26f8a9f476b8447e406bc502f1f92d22 *man/coffee.Rd
+2d9ac2b9cc68283faf12c4813d2a4aab *man/coffee.Rd
 de5982918b70ad74656390a361630cf0 *man/election.Rd
 3a3888b019ae6ee3bf35fe63f8b5d7a5 *man/insolvency.Rd
 6771c95ef28259d05d4724ba90bf305e *man/plebiscite.Rd
-12ebd612f17a014f21aaba06e861c4ea *man/star.cumulative.Rd
-09cd36c38ca329c2e4bad5cde42db5dc *man/star.nominal.Rd
-597f151866438edd3e43de2158105b03 *man/star.sequential.Rd
+671c411176c38a3b3c2c2e18c6b46f6c *man/star.cumulative.Rd
+78de535083e8075e4a2e5d7c7ea56088 *man/star.nominal.Rd
+488facac71ec95d98630c7832ebf0a08 *man/star.sequential.Rd
 5a159ec95f8ea51fb358188f9ff11f83 *man/womenlabour.Rd

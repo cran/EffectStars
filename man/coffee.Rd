@@ -23,9 +23,6 @@ The explanatory variables either refer to the household as a whole or to the hea
     \item{\code{Persons}}{Number of persons in household}
   }
 }
-\source{
-\url{http://www.stat.uni-muenchen.de/service/datenarchiv/}
-}
 \references{
 Gesellschaft \enc{für}{fuer} Konsumforschung (GfK)
 }

@@ -25,7 +25,7 @@ These data are drawn from the 1997-2001 British Election Panel Study (BEPS).
   }
 }
 \source{
-R package effects: \code{\link[effects]{BEPS}}
+R package carData: \code{\link[carData]{BEPS}}
 }
 \references{
 British Election Panel Study (BEPS)

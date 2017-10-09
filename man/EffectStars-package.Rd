@@ -23,7 +23,7 @@ For further details see \code{\link{star.nominal}}, \code{\link{star.sequential}
 \author{
 Gunther Schauberger\cr
 \email{gunther@stat.uni-muenchen.de}\cr
-\url{http://www.statistik.lmu.de/~schauberger/}
+\url{http://www.semsto.statistik.uni-muenchen.de/personen/doktoranden/schauberger/index.html}
 }
 \references{
 Tutz, G. and Schauberger, G. (2012): \emph{Visualization of Categorical Response Models -
