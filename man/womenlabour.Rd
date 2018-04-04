@@ -19,7 +19,7 @@ The data are from a 1977 survey of the Canadian population.
   }
 }
 \source{
-R package car: \code{\link[car]{Womenlf}}
+R package carData: \code{\link[carData]{Womenlf}}
 }
 \references{
 \emph{Social Change in Canada Project}. York Institute for Social Research.

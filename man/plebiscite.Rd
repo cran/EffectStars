@@ -24,7 +24,7 @@ ten years (voting yes) or if there would be presidential elections in 1989 (voti
   }
 }
 \source{
-R package car: \code{\link[car]{Chile}}
+R package carData: \code{\link[carData]{Chile}}
 }
 \references{
 Personal communication from FLACSO/Chile.

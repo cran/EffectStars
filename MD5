@@ -1,4 +1,4 @@
-1be60c82c953878babb6a35e108041be *DESCRIPTION
+d8bdb1ebd26d7444d0fbd310855121f6 *DESCRIPTION
 9583f0e386c754b4ab7ea5b6452e1630 *NAMESPACE
 b0c706ff3ce9013565125a4efb051f08 *R/star.cumulative.R
 e2be7f6ceb93a0ba0851b17174e0bb73 *R/star.nominal.r
@@ -20,8 +20,8 @@ a8997c3e1d4f6973efae45ed1fe32a3b *man/alligator.Rd
 2d9ac2b9cc68283faf12c4813d2a4aab *man/coffee.Rd
 de5982918b70ad74656390a361630cf0 *man/election.Rd
 3a3888b019ae6ee3bf35fe63f8b5d7a5 *man/insolvency.Rd
-6771c95ef28259d05d4724ba90bf305e *man/plebiscite.Rd
+c9aac4bc01d8d58ca072d6a4974135b7 *man/plebiscite.Rd
 671c411176c38a3b3c2c2e18c6b46f6c *man/star.cumulative.Rd
 78de535083e8075e4a2e5d7c7ea56088 *man/star.nominal.Rd
 488facac71ec95d98630c7832ebf0a08 *man/star.sequential.Rd
-5a159ec95f8ea51fb358188f9ff11f83 *man/womenlabour.Rd
+6c2a028f1dc5c41ace8a8c1760a5c2f1 *man/womenlabour.Rd
