@@ -22,8 +22,8 @@ For further details see \code{\link{star.nominal}}, \code{\link{star.sequential}
 
 \author{
 Gunther Schauberger\cr
-\email{gunther@stat.uni-muenchen.de}\cr
-\url{http://www.semsto.statistik.uni-muenchen.de/personen/doktoranden/schauberger/index.html}
+\email{gunther.schauberger@tum.de}\cr
+\url{https://www.sg.tum.de/epidemiologie/team/schauberger/}
 }
 \references{
 Tutz, G. and Schauberger, G. (2012): \emph{Visualization of Categorical Response Models -
